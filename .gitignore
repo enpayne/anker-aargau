@@ -1,5 +1,5 @@
 'use strict';
-.idea
+.idea/
 *.iml
 .brackets.json
 node_modules
