@@ -1,5 +1,12 @@
 angular.module('anker-aargau', [])
 
-    .controller('projectsController', ['$scope', function($scope) {
-        $scope.name = 'Freddy';
+    .controller('articleController', ['$scope', function($scope) {
+        $scope.newArticle = "";
+        $scope.articles = [];
+
+        $scope.addNewArticle = function() {
+            $scope.articles.push($scope.newArticle);
+            $scope.newArticle = "";
+        };
+
     }]);
