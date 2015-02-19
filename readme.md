@@ -9,6 +9,15 @@ brew install npm
 ## Install bower
 $ npm install -g bower
 
+# Install mongodb
+$ brew install mongodb
+
+Set up the data directory & its permissions:
+$ sudo mkdir /data/db
+$ sudo chown <your_user_name> /data/db
+to find out your user name, use this command:
+$ whoami
+
 ## Install required node modules
 $ npm install
 
