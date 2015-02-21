@@ -15,15 +15,15 @@ angular.module('anker-aargau', [
             })
             .when('/club', {
                 templateUrl: '/partials/club.html',
-                controller: 'clubControllers'
+                controller: 'clubController'
             })
             .when('/news', {
                 templateUrl: '/partials/news.html',
-                controller: 'newsControllers'
+                controller: 'newsController'
             })
             .when('/contact', {
                 templateUrl: '/partials/contact.html',
-                controller: 'contactControllers'
+                controller: 'contactController'
             }).
             otherwise({
                 redirectTo: '/projects'
