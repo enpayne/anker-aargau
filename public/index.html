@@ -5,22 +5,7 @@
     <title>anker-aargau!</title>
 </head>
 <body ng-app="anker-aargau" ng-controller="articleController">
-
-    <h1>Anker Aargau!</h1>
-
-    <p>Write an article:</p>
-    <textarea ng-model="newArticle" style="width: 450px; height: 100px;"></textarea>
-    <br />
-    <input type="button" value="Add!" ng-click="addNewArticle()"/>
-
-    <h3>Articles</h3>
-
-    <p ng-if="articles.length == 0">There are no articles yet, go go add one!</p>
-    <ul>
-        <li ng-repeat="article in articles">
-            {{ article }}
-        </li>
-    </ul>
+    <div ng-view=""></div>
 
     <script src="/components/angular/angular.min.js"></script>
     <script src="/js/app.js"></script>
