@@ -1,12 +1,31 @@
-angular.module('anker-aargau', [])
+angular.module('anker-aargau', [
+    'ngRoute',
+    'projectsControllers',
+    'clubControllers',
+    'newsControllers',
+    'contactControllers'
+])
 
-    .controller('articleController', ['$scope', function($scope) {
-        $scope.newArticle = "";
-        $scope.articles = [];
-
-        $scope.addNewArticle = function() {
-            $scope.articles.push($scope.newArticle);
-            $scope.newArticle = "";
-        };
-
+.config(['$routeProvider',
+    function($routeProvider) {
+        $routeProvider.
+            when('/projects', {
+                templateUrl: '/partials/projects.html',
+                controller: 'projectsController'
+            })
+            .when('/club', {
+                templateUrl: '/partials/club.html',
+                controller: 'clubControllers'
+            })
+            .when('/news', {
+                templateUrl: '/partials/news.html',
+                controller: 'newsControllers'
+            })
+            .when('/contact', {
+                templateUrl: '/partials/contact.html',
+                controller: 'contactControllers'
+            }).
+            otherwise({
+                redirectTo: '/projects'
+            });
     }]);
