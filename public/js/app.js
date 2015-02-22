@@ -1,9 +1,13 @@
 angular.module('anker-aargau', [
     'ngRoute',
     'projectsControllers',
+    'projectsServices',
     'clubControllers',
+    'clubServices',
     'newsControllers',
-    'contactControllers'
+    'newsServices',
+    'contactControllers',
+    'contactServices'
 ])
 
 .config(['$routeProvider',
