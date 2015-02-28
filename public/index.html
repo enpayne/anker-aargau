@@ -8,39 +8,10 @@
 	<link rel="stylesheet" type="text/css" href="styles/main.css">
 	<link rel="shortcut icon" href="../images/favicon.ico">
 </head>
-<body ng-app="anker-aargau">	
-	<nav>
-		<ul>
-			<li class="brand"><a href="#"><img src="../images/logo_anker.png"></a></li>
-			<li><a href="#/projects">Projekte <i class="fa fa-heart"></i></a></li>
-			<li><a href="#/news">Aktuelles <i class="fa fa-newspaper-o"></i></a></li>
-			<li><a href="#/club">Verein <i class="fa fa-users"></i></a></li>
-			<li><a href="#/contact">Kontakt <i class="fa fa-envelope"></i></a></li>
-		</ul>
-	</nav>
+<body ng-app="anker-aargau" ng-controller="pageController">
+	<anker-header></anker-header>
  <div>
  	<div ng-view=""></div>
-
- 	<section class="section-one">
- 		<div class="prlx-1"></div>
- 		<h1>PROJEKTE</h1>
- 	</section>
- 	<section class="container section-two">
- 	<div class="col-xs-12 col-md-4 circle">circle</div>
- 	<div class="col-xs-12 col-md-8">
- 		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque lacinia venenatis tempus. Phasellus magna felis, luctus sit amet condimentum eu, tincidunt vel magna. Nulla euismod dolor purus, vel dapibus turpis viverra sed. Quisque nec ultrices enim. Nunc tincidunt vel lacus a egestas. Praesent a erat dictum, laoreet nunc vel, elementum augue. Duis convallis at sem in malesuada. Quisque ut turpis nec quam tempus elementum in non lacus. Maecenas eleifend mi quis ultrices consectetur. Curabitur rhoncus in velit tempor gravida. Etiam sit amet faucibus nisi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Lorem ipsum dolor sit amet, consectetur.</p>
-	</div>
- 	</section>
- 	<section class="section-three">
- 		<div class="prlx-2"></div>
- 		<h2>integrieren</h2>
- 	</section>
- 	<section class="section-two">
- 	<div class="col-xs-12 col-md-4 circle">circle</div>
- 	<div class="col-xs-12 col-md-8">
- 		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque lacinia venenatis tempus. Phasellus magna felis, luctus sit amet condimentum eu, tincidunt vel magna. Nulla euismod dolor purus, vel dapibus turpis viverra sed. Quisque nec ultrices enim. Nunc tincidunt vel lacus a egestas. Praesent a erat dictum, laoreet nunc vel, elementum augue. Duis convallis at sem in malesuada. Quisque ut turpis nec quam tempus elementum in non lacus. Maecenas eleifend mi quis ultrices consectetur. Curabitur rhoncus in velit tempor gravida. Etiam sit amet faucibus nisi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam aliquam, nulla sed dapibus malesuada, sapien tortor molestie ligula, ut auctor sapien arcu convallis lacus.</p>
-		</div>
- 	</section>
 </div>
 
 	<script src="components/jquery/dist/jquery.min.js"></script>
