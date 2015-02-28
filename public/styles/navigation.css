@@ -3,6 +3,7 @@ nav {
 	height: 100px;
 	position: fixed;
 	background-color: rgba(255,255,255,0.9);
+    z-index: 9999;
 }
 
 ul {
@@ -13,6 +14,18 @@ nav li {
 	display: inline;
 	float: right;
 	padding: 20px;
+}
+
+nav li .navigation-element {
+    text-align: center;
+}
+
+nav li .navigation-element .fa {
+    font-size: 30px;
+}
+
+.nav-active {
+    color: #CF006A;
 }
 
 .brand {
