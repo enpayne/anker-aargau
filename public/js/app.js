@@ -1,5 +1,6 @@
 angular.module('anker-aargau', [
     'ngRoute',
+    'pageControllers',
     'projectsControllers',
     'projectsServices',
     'clubControllers',
@@ -7,7 +8,8 @@ angular.module('anker-aargau', [
     'newsControllers',
     'newsServices',
     'contactControllers',
-    'contactServices'
+    'contactServices',
+    'pageDirectives'
 ])
 
 .config(['$routeProvider',
