@@ -3,11 +3,18 @@ angular.module('pageDirectives', [])
     .directive('ankerHeader', function() {
         return {
             restrict : 'E',
-            templateUrl : 'partials/page-header.html',
-            link : function (scope, element, attrs) {
+            replace: true,
+            templateUrl : 'partials/page-header.html'
+        };
+    })
 
-
-
-            }
+    .directive('ankerSplash', function() {
+        return {
+            restrict : 'E',
+            replace: true,
+            scope : {
+              activeView : '='
+            },
+            templateUrl : 'partials/page-splash.html'
         };
     });
