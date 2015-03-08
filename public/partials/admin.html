@@ -1,0 +1,43 @@
+<div style="position: relative; top: 100px;">
+    <h2>Erfasste Projekte</h2>
+
+    <div ng-hide="showCreate" class="row-fluid col-md-12 top-buffer-large" ng-repeat="project in projects | orderBy : 'title'">
+        <div class="row-fluid col-md-12">
+            <span class="col-md-3"><strong>{{ project.title }}</strong></span>
+            <a ng-click="showProjectDetails(project._id)">Details</a>
+        </div>
+        <div ng-show="openProject === project._id">
+            <div class="row-fluid col-md-12 top-buffer-small">
+                <textarea class="col-md-4" style="height: 100px;" ng-model="project.description"></textarea>
+            </div>
+            <div class="row-fluid col-md-12 top-buffer-small">
+                <input class="col-md-1" type="button" value="Speichern" ng-click="updateProject(project)"/>
+                <input class="col-md-1" type="button" value="Löschen" ng-click="deleteProject(project)"/>
+            </div>
+        </div>
+    </div>
+
+    <div ng-hide="showCreate" class="row-fluid col-md-12 top-buffer-large">
+        <input type="button" value="Neues Projekt erfassen" ng-click="showCreateProjectForm()"/>
+    </div>
+
+    <div ng-show="showCreate" class="row-fluid">
+        <div class="row-fluid col-md-12">
+            <label class="col-md-6">
+                <span class="col-md-4">Projekttitel:</span>
+                <input type="text" ng-model="newProject.title" class="col-md-8">
+            </label>
+        </div>
+        <div class="row-fluid col-md-12">
+            <label class="col-md-6">
+                <span class="col-md-4">Beschreibung:</span>
+                <textarea class="col-md-8" style="height: 200px;" ng-model="newProject.description" class="col-md-4" />
+            </label>
+        </div>
+        <div class="row-fluid top-buffer-small">
+            <input class="col-md-1" type="button" value="Speichern" ng-click="createProject()"/>
+            <input class="col-md-1" type="button" value="Abbrechen" ng-click="cancelCreate()"/>
+        </div>
+
+    </div>
+</div>

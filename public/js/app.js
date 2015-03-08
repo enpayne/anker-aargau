@@ -8,6 +8,8 @@ angular.module('anker-aargau', [
     'newsControllers',
     'newsServices',
     'contactControllers',
+    'adminServices',
+    'adminControllers',
     'contactServices',
     'pageDirectives'
 ])
@@ -30,6 +32,10 @@ angular.module('anker-aargau', [
             .when('/contact', {
                 templateUrl: '/partials/contact.html',
                 controller: 'contactController'
+            })
+            .when('/admin', {
+                templateUrl: '/partials/admin.html',
+                controller: 'adminController'
             }).
             otherwise({
                 redirectTo: '/projects'
