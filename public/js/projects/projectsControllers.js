@@ -1,7 +1,10 @@
 angular.module('projectsControllers', [])
 
-.controller('projectsController', ['$scope', function($scope) {
-    $scope.projects = ['some project', 'another project'];
+.controller('projectsController', ['$scope', 'projectsService', function($scope, projectsService) {
+        $scope.navigation.activeView = 'projects';
 
-    $scope.navigation.activeView = 'projects';
+        projectsService.loadProjects()
+            .success(function(projects) {
+                $scope.projects = projects;
+            });
 }]);
