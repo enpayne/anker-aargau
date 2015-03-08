@@ -4,7 +4,11 @@ body{
 	color: #444;
 }
 a{
-	color:#000;
+	color:#444;
+}
+a:hover{
+	color: #CF006A;
+	text-decoration: none;
 }
 
 *[class^="prlx"] {
