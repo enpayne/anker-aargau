@@ -8,13 +8,13 @@ angular.module('pageDirectives', [])
         };
     })
 
-    .directive('ankerSplash', function() {
+    .directive('ankerFooter', function() {
         return {
             restrict : 'E',
             replace: true,
             scope : {
               activeView : '='
             },
-            templateUrl : 'partials/page-splash.html'
+            templateUrl : 'partials/page-footer.html'
         };
     });

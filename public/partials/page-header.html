@@ -1,37 +1,36 @@
-<nav>
-    <ul>
-        <li class="brand"><a href="#"><img src="../images/logo_anker.png"></a></li>
-        <li>
-            <div class="navigation-element">
+<header class="navbar-fixed-top">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <div class="brand"><a href="#"><img src="../images/logo_anker.png"></a></div> 
+    <nav class="navbar-collapse collapse">
+        <ul class="nav">
+            <li class="navigation-element">
                 <a href="#/contact">
                     <i ng-class="navigation.activeView == 'contact' ? 'fa fa-envelope nav-active' : 'fa fa-envelope'"/><br />
                     Kontakt
                 </a>
-            </div>
-        </li>
-        <li>
-            <div class="navigation-element">
+            </li>
+            <li class="navigation-element">
                 <a href="#/club">
                     <i ng-class="navigation.activeView == 'club' ? 'fa fa-users nav-active' : 'fa fa-users'"/><br />
                     Verein
                 </a>
-            </div>
-        </li>
-        <li>
-            <div class="navigation-element nav-active">
+            </li>
+            <li class="navigation-element">
                 <a href="#/news">
                     <i ng-class="navigation.activeView == 'news' ? 'fa fa-newspaper-o nav-active' : 'fa fa-newspaper-o'"/><br />
                     Aktuelles
                 </a>
-            </div>
-        </li>
-        <li>
-            <div class="navigation-element">
+            </li>
+            <li class="navigation-element active">
                 <a href="#/projects">
                     <i ng-class="navigation.activeView == 'projects' ? 'fa fa-heart nav-active' : 'fa fa-heart'"/><br />
                     Projekte
                 </a>
-            </div>
-        </li>
-    </ul>
-</nav>
+            </li>
+        </ul>
+    </nav>
+</header>

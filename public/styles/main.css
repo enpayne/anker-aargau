@@ -1,14 +1,32 @@
 @import url("navigation.css");
+@import url("footer.css");
 
 body{
 	color: #444;
 }
+
+h1{
+	color: #fff;
+	font-size: 5rem;
+	margin-top: 245px;
+}
+
+h2{
+	color: #fff;
+	font-size: 3rem;
+	margin-top: 83px;
+}
+
 a{
 	color:#444;
 }
 a:hover{
 	color: #CF006A;
 	text-decoration: none;
+}
+
+.center{
+	text-align: center;
 }
 
 *[class^="prlx"] {
@@ -27,12 +45,6 @@ a:hover{
 	background: url('../../images/heath7.jpg');
 	background-repeat: no-repeat;
 }
-
-.section-one h1, .section-three h2{ 
-	position: absolute;
-	bottom:30%;
-	left: 40%;
-}
 .section-one, .section-two, .section-three{
 	width: 100%;
 	position: relative;
@@ -43,8 +55,12 @@ a:hover{
 }
 .section-one{
 	min-height: 500px;
+	background-color: rgba(4,4,4,0.5);
 }
-.circle {
+.section-three{
+	background-color: rgba(4,4,4,0.5);
+}
+.circle{
     text-align: center;
 }
 
@@ -54,4 +70,10 @@ a:hover{
 
 .top-buffer-large {
     margin-top: 30px;
+}
+
+
+/* ----------------- BOOTSTRAP OVERWRITES----------------- */
+.container{
+	padding: 30px;
 }
