@@ -28,11 +28,6 @@ angular.module('adminControllers', [])
         };
 
         $scope.showProjectDetails = function(projectId) {
-            if ($scope.openProject === projectId) {
-                delete $scope.openProject;
-            } else {
-                $scope.openProject = projectId;
-            }
 
         };
 

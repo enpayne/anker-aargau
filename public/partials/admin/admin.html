@@ -29,7 +29,7 @@
                         <div ng-switch-when="true">Ja</div>
                         <div ng-switch-default>Nein</div>
                     </td>
-                    <td><a href="showDetails(project)">Details...</a></td>
+                    <td><a ng-click="showProjectDetails(project)" href="javascript: void(0)">Details...</a></td>
                     <td><a ng-click="deleteProject(project)" href="javascript: void(0)">Löschen</a></td>
                 </tr>
             </tbody>
