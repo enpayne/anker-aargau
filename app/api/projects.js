@@ -1,15 +1,14 @@
-
 module.exports = function(app, db) {
 
     var projects = db.get('projects');
 
-    app.get('/projects', function(req, res) {
+    app.get('/api/projects', function(req, res) {
         projects.find({}, function(err, docs) {
             res.json(docs);
         });
     });
 
-    app.post('/projects', function(req, res) {
+    app.post('/api/projects', function(req, res) {
         var project = req.body.project;
         projects.insert(project, function(err) {
             if (err) throw err;
@@ -17,7 +16,7 @@ module.exports = function(app, db) {
         });
     });
 
-    app.put('/projects/:id', function(req, res) {
+    app.put('/api/projects/:id', function(req, res) {
         var id = req.params.id;
         var project = req.body.project;
         projects.updateById(id, project, function(err) {
@@ -26,7 +25,7 @@ module.exports = function(app, db) {
         });
     });
 
-    app.delete('/projects/:id', function(req, res) {
+    app.delete('/api/projects/:id', function(req, res) {
         var id = req.params.id;
         projects.remove({ _id : id }, function (err) {
             if (err) throw err;

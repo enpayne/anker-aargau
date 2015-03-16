@@ -4,22 +4,22 @@ angular.module('adminServices', [])
         var adminService = {};
 
         adminService.loadProjects = function() {
-            return $http.get('/projects');
+            return $http.get('/api/projects');
         };
 
         adminService.updateProject = function(project) {
             var id = project._id;
-            return $http.put('/projects/' + id, {
+            return $http.put('/api/projects/' + id, {
                 project : project
             });
         };
 
         adminService.deleteProject = function(projectId) {
-          return $http.delete('/projects/' + projectId);
+          return $http.delete('/api/projects/' + projectId);
         };
 
         adminService.createProject = function(project) {
-            return $http.post('/projects', {
+            return $http.post('/api/projects', {
                 project : project
             })
         };

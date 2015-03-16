@@ -1,0 +1,28 @@
+<div class="admin-content col-md-6">
+
+    <div class="row">
+        <h2>Neues Projekt erfassen</h2>
+    </div>
+
+    <div class="row top-buffer-large">
+        <span class="col-md-3">Projekttitel:</span>
+        <input type="text" ng-model="newProject.title" class="col-md-7">
+    </div>
+
+    <div class="row top-buffer-small">
+        <span class="col-md-3">Beschreibung:</span>
+        <textarea class="col-md-7 project-description" ng-model="newProject.description"></textarea>
+    </div>
+
+    <div class="row top-buffer-small">
+        <span class="col-md-3">Veröffentlichen:</span>
+        <input type="checkbox" ng-model="newProject.published" />
+    </div>
+
+    <div class="row top-buffer-small">
+        <div class="col-md-3" />
+        <a class="col-md-4" href="#/admin">Abbrechen</a>
+        <input class="col-md-3" type="button" value="Speichern" ng-click="saveProject()"/>
+    </div>
+
+</div>

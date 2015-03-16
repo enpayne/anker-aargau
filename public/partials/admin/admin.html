@@ -1,0 +1,43 @@
+<style>
+
+</style>
+<div class="admin-content">
+    <h2>Erfasste Projekte</h2>
+
+    <div class="row" ng-show="projects.length === 0">
+        <span>Bis jetzt sind noch keine Projekte erfasst worden.</span>
+    </div>
+
+    <div class="row">
+        <table ng-show="projects.length > 0" class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Titel</th>
+                    <th>Erfasst von</th>
+                    <th>Erfasst am</th>
+                    <th>Öffentlich</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="project in projects | orderBy : 'title'">
+                    <td>{{ project.title }}</td>
+                    <td>john wayne</td>
+                    <td>01/01/2015</td>
+                    <td ng-switch="project.published">
+                        <div ng-switch-when="true">Ja</div>
+                        <div ng-switch-default>Nein</div>
+                    </td>
+                    <td><a href="showDetails(project)">Details...</a></td>
+                    <td><a ng-click="deleteProject(project)" href="javascript: void(0)">Löschen</a></td>
+                </tr>
+            </tbody>
+
+        </table>
+    </div>
+
+    <div class="row top-buffer-large">
+        <a href="#/admin/create">Neues Projekt erfassen</a>
+    </div>
+</div>

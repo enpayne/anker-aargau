@@ -1,0 +1,16 @@
+.admin-content {
+    position: relative;
+    margin-top: 100px;
+    margin-left: 35px;
+    height: 100%;
+
+}
+
+.admin-content a {
+    font-weight: bold;
+    color: #CF006A;
+}
+
+.admin-content textarea.project-description {
+    height: 250px;
+}

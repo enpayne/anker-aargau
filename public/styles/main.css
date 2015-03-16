@@ -1,17 +1,18 @@
 @import url("navigation.css");
 @import url("footer.css");
+@import url("admin.css");
 
 body{
 	color: #444;
 }
 
-h1{
+h1 {
 	color: #fff;
 	font-size: 5rem;
 	margin-top: 245px;
 }
 
-h2{
+.main-section h2{
 	color: #fff;
 	font-size: 3rem;
 	margin-top: 83px;

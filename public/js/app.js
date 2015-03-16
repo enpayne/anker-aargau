@@ -34,8 +34,12 @@ angular.module('anker-aargau', [
                 controller: 'contactController'
             })
             .when('/admin', {
-                templateUrl: '/partials/admin.html',
+                templateUrl: '/partials/admin/admin.html',
                 controller: 'adminController'
+            }).
+            when('/admin/create', {
+                templateUrl: '/partials/admin/admin-create.html',
+                controller: 'adminCreateController'
             }).
             otherwise({
                 redirectTo: '/projects'
