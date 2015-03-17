@@ -3,28 +3,21 @@
     <h1>Projekte</h1>
 </section>
 
-<section class="content-section">
-    <div class="col-xs-12 col-sm-4 center circle">
-        <h3>Arbeitscoach</h3>
-    </div>
-    <div class="col-xs-12 col-sm-8">
-        <p>Unser Angebot beinhaltet die vereinbarte, definierte und zeitlich unbefristete Begleitung am Arbeitsplatz für psychisch beeinträchtigte Menschen mit dem Ziel, die Arbeitsstelle zu erhalten oder nach dem Verlust der Arbeitsstelle schnellstmögliche Reintegration in den 1. Arbeitsmarkt. Dies setzt die Bereitschaft aller Beteiligten zur Fortsetzung, oder zur Anstellung unter speziellen Bedingungen, voraus.</p>
-        <p>Der ArbeitsCoach unterstützt und berät in Fragen der Gesundheit/Krankheit, Belastbarkeit, Sozialrecht und Arbeitsrecht die involvierten Personen sowie das Arbeitsteam. Er kann in schwierigen Situationen am Arbeitsplatz durch den Klienten oder dessen Vorgesetzten beigezogen werden.</p>
-    </div>
-</section>
+<div ng-repeat="project in projects">
+    <section class="content-section" >
+        <div ng-if="$index / 2 === 0" class="col-xs-12 col-sm-4 center circle">
+            <h3>{{ project.title }}</h3>
+        </div>
+        <div class="col-xs-12 col-sm-8">
+            <p ng-repeat="paragraph in project.content">{{ paragraph }}</p>
+        </div>
+        <div ng-if="$index / 2 !== 0" class="col-xs-12 col-sm-4 center circle">
+            <h3>{{ project.title }}</h3>
+        </div>
+    </section>
 
-<section class="banner-between banner-heath">
-    <div class="overlay"></div>
-    <h2>integrieren</h2>
-</section>
-
-<section class="content-section">
-    <div class="col-xs-12 col-sm-8">
-        <p>Die im Jahr 2011 neu gestaltete Webseite Apika will alle Dienstleistungen für psychisch Kranke Menschen zusammenfassen. Ziel ist, im Sektor psychische Erkrankung und Behinderung zu einem Überblick der bestehenden Angebote im Kanton zu verhelfen.Betroffene, Angehörige und Fachpersonen profitieren von dieser Servicedienstleistung.</p>
-        <p>Hier finden Sie Angebote aus den Bereichen Wohnen, Arbeit, Pflege und Beratung: <a href="http://apika.ch/">apika.ch</a></p>
-        <p>Alle Anbieter, die noch nicht Mitglied beim Netzwerk Apika sind, können sich auf der Homepage direkt anmelden, sofern die Aufnahmekriterien erfüllt werden.</p>
-    </div>
-    <div class="col-xs-12 col-sm-4 center circle">
-        <h3>APIKA</h3>
-    </div>
-</section>
+    <section class="banner-between banner-heath">
+        <div class="overlay"></div>
+        <h2>{{ project.leadWord }}</h2>
+    </section>
+</div>
