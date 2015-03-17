@@ -1,0 +1,81 @@
+@import url("navigation.css");
+@import url("footer.css");
+@import url("admin.css");
+
+html, body {
+	height: 100%;
+}
+
+.content {
+	height: 100%;
+}
+
+.page-header {
+	text-align: center;
+	margin-top: 100px;
+	padding: 0;
+	color: white;
+	height: 450px;
+}
+
+.overlay {
+	margin: 0;
+	padding: 0;
+	position: relative;
+	left: 0; top: 0;
+	opacity: .3;
+	background-color: black;
+	height: 100%;
+	width: 100%;
+}
+
+.page-header h1 {
+	position: absolute;
+	top: 250px;
+	font-size: 5rem;
+	text-align: center;
+	width: 100%;
+}
+
+.banner-projects {
+	background: url('../../images/flower5.jpg');
+}
+
+.banner-heath {
+	background: url('../../images/heath7.jpg');
+}
+
+.content-section {
+	height: 300px;
+	overflow: hidden;
+}
+
+.center{
+	text-align: center;
+}
+
+.circle{
+	background-image: url("../images/dotted_circle.png");
+	background-repeat: no-repeat;
+	background-position: center center;
+	min-height: 230px;
+}
+
+.circle h3 {
+	font-size: 2rem;
+	position: relative;
+	top: 80px;
+}
+
+.banner-between {
+	height: 150px;
+	width: 100%;
+	margin-bottom: 50px;
+}
+
+.banner-between h2 {
+	position: relative;
+	width: 100%;
+	top: -125px;
+	text-align: center;
+}

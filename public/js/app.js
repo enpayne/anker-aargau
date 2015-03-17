@@ -18,7 +18,7 @@ angular.module('anker-aargau', [
     function($routeProvider) {
         $routeProvider.
             when('/projects', {
-                templateUrl: '/partials/projects.html',
+                templateUrl: '/partials/projects2.html',
                 controller: 'projectsController'
             })
             .when('/club', {
